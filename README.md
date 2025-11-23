@@ -7,17 +7,19 @@ Limpieza y depuración de un archivo de inventario para uso en procesos contable
 ## Descripción del notebook "limpieza_inventario"
 
 Este notebook procesa un archivo Excel con el inventario mensual y elimina datos innecesarios. Las operaciones realizadas son:
--Filas vacías que aparecen antes de la fila en gris.
--La fila que contiene el RFC de la empresa (ubicada antes de la fila en gris).
--Filas donde las tres últimas columnas tienen valor cero (0.000) y las demás están vacías.
+1. Filas vacías que aparecen antes de la fila en gris.
+2. La fila que contiene el RFC de la empresa (ubicada antes de la fila en gris).
+3. Filas donde las tres últimas columnas tienen valor cero (0.000) y las demás están vacías.
 
 También se eliminan las columnas identificadas en la fila en gris:
--Costeo
--U. base
+1. Costeo
+2. U. base
 
 Finalmente, se realizan limpiezas específicas en celdas particulares:
--En filas donde la columna "Producto" inicia con "MARCA", se asigna NaN al resto de las celdas de esa fila.
--En filas donde la columna "Costo unitario" contiene "Total marca:", "Total fila:" o "Total general:", se asigna NaN en la columna "Saldo" correspondiente a esa fila.
+1. En filas donde la columna "Producto" inicia con "MARCA", se asigna NaN al resto de las celdas de esa fila.
+2. En filas donde la columna "Costo unitario" contiene "Total marca:", "Total fila:" o "Total general:", se asigna NaN en la columna "Saldo" correspondiente a esa fila.
+
+El objetivo de esta limpieza es proporcionar un archivo xlsx claro, sin datos irrelevantes para procesos contables.
 
 ---
 
